@@ -15,7 +15,7 @@ export default function Home() {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+                    [name]: value,
     }));
   };
 
@@ -25,7 +25,7 @@ export default function Home() {
       `Thank you ${formData.name}!\n\nWe received your inquiry and will contact you at ${formData.email} soon.`,
     );
     setFormData({ name: "", email: "", phone: "", project: "" });
-      setSubmitted(true);
+                  setSubmitted(true);
   };
 
   return (
