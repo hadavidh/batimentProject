@@ -1,0 +1,449 @@
+/* =========================
+   Page base
+========================= */
+.about {
+  padding-top: 48px;
+  margin-top: 0;
+  position: relative;
+  z-index: 0;
+  /* on supprime la marge d'ancrage spécifique pour éviter le "collage" */
+  scroll-margin-top: 0;
+  background: transparent;
+}
+.about__container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================
+   HERO (meilleur UI/UX)
+========================= */
+.about__hero {
+  padding: 48px 0;
+}
+
+.about__heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.about__heroLeft {
+  padding: 10px 0;
+}
+
+.about__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 650;
+  font-size: var(--text-sm);
+}
+
+.about__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  box-shadow: 0 0 0 5px rgba(255,255,255,0.05);
+}
+
+.about__title {
+  margin: 18px 0 8px;
+  font-size: var(--h1);
+  line-height: 1.02;
+  letter-spacing: 0.5px;
+}
+
+.about__subtitle {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: var(--text-lg);
+  line-height: 1.55;
+  max-width: 62ch;
+}
+
+.about__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.about__badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+/* CTA */
+.about__cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.about__btn {
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 750;
+  font-size: var(--text-md);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  transition: transform 0.08s ease, background 0.15s ease, border-color 0.15s ease;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.25);
+}
+
+.about__btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.about__btn--primary {
+  background: linear-gradient(135deg, rgba(255, 209, 102, 0.30), rgba(76, 201, 240, 0.16));
+  border-color: rgba(255, 209, 102, 0.28);
+}
+
+.about__btn--ghost {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Stats (plus lisibles) */
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.about__stat {
+  padding: 14px 14px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.about__statNum {
+  display: block;
+  font-weight: 850;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.about__statLabel {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+/* =========================
+   HERO right card
+========================= */
+.about__heroRight {
+  display: flex;
+  align-items: stretch;
+}
+
+.about__heroCard {
+  width: 100%;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about__heroCardTop {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.about__pill {
+  font-size: var(--text-sm);
+  font-weight: 750;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.14);
+  color: var(--text);
+}
+
+.about__pill--alt {
+  border-color: rgba(76, 201, 240, 0.35);
+}
+
+.about__heroIcons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.about__iconBox {
+  border-radius: 16px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 14px;
+}
+
+.about__icon {
+  display: block;
+  font-size: 22px;
+}
+
+.about__iconLabel {
+  display: block;
+  margin-top: 10px;
+  font-size: var(--text-md);
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.about__heroNote {
+  display: grid;
+  gap: 12px;
+}
+
+.about__heroNoteLine {
+  height: 1px;
+  background: rgba(255,255,255,0.10);
+}
+
+.about__muted {
+  color: var(--muted);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+/* =========================
+   Sections / Cards
+========================= */
+.about__section {
+  padding: 26px 18px;
+}
+
+.about__section--alt {
+  padding-top: 14px;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+.about__card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--p);
+  backdrop-filter: blur(10px);
+}
+
+.about__card--info {
+  background: var(--card2);
+}
+
+.about__h2 {
+  margin: 0 0 12px;
+  font-size: var(--h2);
+  letter-spacing: 0.2px;
+}
+
+.about__h3 {
+  margin: 10px 0 8px;
+  font-size: var(--h3);
+}
+
+.about__p {
+  margin: 0 0 12px;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: var(--text-md);
+}
+
+.about__bullets {
+  margin: 14px 0 0;
+  padding: 0 0 0 20px;
+  color: var(--muted);
+  font-size: var(--text-md);
+}
+
+.about__bullets li {
+  margin: 8px 0;
+}
+
+/* Info list */
+.about__infoList {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.about__infoRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.18);
+}
+
+.about__label {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.about__value {
+  color: var(--text);
+  font-size: var(--text-md);
+  font-weight: 800;
+}
+
+.about__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.about__chip {
+  font-size: var(--text-sm);
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.07);
+  color: var(--text);
+  font-weight: 650;
+}
+
+/* =========================
+   Services cards
+========================= */
+.about__sectionHead {
+  margin: 0 auto 14px;
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.about__serviceCard {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 14px 42px rgba(0,0,0,0.22);
+}
+
+.about__serviceIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.about__miniList {
+  margin: 12px 0 0;
+  padding: 0 0 0 20px;
+  color: var(--muted);
+  font-size: var(--text-md);
+}
+
+.about__miniList li {
+  margin: 8px 0;
+}
+
+/* =========================
+   Footer
+========================= */
+.about__footer {
+  padding: 20px 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 16px;
+}
+
+.about__footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.about__footerText {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.about__footerLink {
+  color: var(--text);
+  font-weight: 750;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.35);
+  padding-bottom: 2px;
+}
+
+.about__footerLink:hover {
+  border-bottom-color: rgba(255,255,255,0.7);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 980px) {
+  .about__heroGrid {
+    grid-template-columns: 1fr;
+  }
+  .about__stats {
+    grid-template-columns: 1fr;
+  }
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .about__cards {
+    grid-template-columns: 1fr;
+  }
+  .about__btn {
+    flex: 1;
+    text-align: center;
+  }
+}
