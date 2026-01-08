@@ -1,0 +1,161 @@
+import { useState } from 'react';
+import './Home.css';
+
+export default function Home() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    project: ''
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Thank you ${formData.name}!\n\nWe received your inquiry and will contact you at ${formData.email} soon.`);
+    setFormData({ name: '', email: '', phone: '', project: '' });
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="home">
+      {/* Header & Navigation */}
+      <header>
+        <nav>
+          <a href="/" className="logo">BuildPro</a>
+          <ul className="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <a href="#contact" className="cta-button">Get in Touch</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Professional Building Solutions</h1>
+          <p>Quality construction services for residential and commercial projects</p>
+          <div className="hero-buttons">
+            <a href="#contact" className="btn-primary">Request a Quote</a>
+            <a href="#services" className="btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="services">
+        <div className="container">
+          <h2 className="section-title">Our Services</h2>
+          <div className="services-grid">
+            {[
+              { icon: '🏗️', title: 'Construction', desc: 'From residential homes to commercial buildings, we deliver quality construction with precision and professionalism.' },
+              { icon: '🔧', title: 'Renovation', desc: 'Transform your space with our expert renovation services. We modernize and refresh existing structures.' },
+              { icon: '⚡', title: 'Electrical Work', desc: 'Professional electrical installation and maintenance services meeting all safety standards and regulations.' },
+              { icon: '🚰', title: 'Plumbing', desc: 'Complete plumbing solutions for new constructions and repairs, with reliable and durable installations.' },
+              { icon: '🏠', title: 'Interior Design', desc: 'Create beautiful interiors that match your vision. Our design team brings functionality and aesthetics together.' },
+              { icon: '📐', title: 'Project Management', desc: 'Full project coordination from planning to completion, ensuring timely delivery and budget adherence.' }
+            ].map((service, index) => (
+              <div key={index} className="service-card">
+                <h3>{service.icon} {service.title}</h3>
+                <p>{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us Section */}
+      <section id="why-us" className="why-us">
+        <div className="container">
+          <h2 className="section-title">Why Choose Us</h2>
+          <div className="why-us-grid">
+            {[
+              { icon: '⭐', title: '15+ Years Experience', desc: 'Proven track record with hundreds of successful projects delivered on time and on budget.' },
+              { icon: '👥', title: 'Expert Team', desc: 'Licensed professionals with certifications in all areas of construction and building trades.' },
+              { icon: '✅', title: 'Quality Guarantee', desc: 'We stand behind our work with comprehensive warranties and customer satisfaction guarantees.' },
+              { icon: '💰', title: 'Competitive Pricing', desc: 'Transparent pricing with no hidden costs. Free consultations and detailed project estimates.' },
+              { icon: '🕐', title: 'On Time Delivery', desc: 'We respect your timeline and deliver projects on schedule with meticulous project management.' },
+              { icon: '📞', title: '24/7 Support', desc: 'Dedicated support team available whenever you need assistance or questions about your project.' }
+            ].map((feature, index) => (
+              <div key={index} className="feature-box">
+                <div className="feature-icon">{feature.icon}</div>
+                <h4>{feature.title}</h4>
+                <p>{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="contact">
+        <div className="container">
+          <h2>Get Your Free Quote Today</h2>
+          <p>Contact us for a consultation and let's discuss your construction project</p>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="project">Project Description</label>
+              <textarea
+                id="project"
+                name="project"
+                value={formData.project}
+                onChange={handleInputChange}
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="btn-primary" style={{ width: '100%' }}>Send Inquiry</button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer>
+        <p>&copy; 2026 BuildPro Construction. All rights reserved. | Professional Building Solutions</p>
+      </footer>
+    </div>
+  );
+}
