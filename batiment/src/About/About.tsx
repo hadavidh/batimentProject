@@ -13,7 +13,7 @@ export default function About() {
                 Artisans & professionnels du bâtiment
               </div>
 
-              <h1 className="about__title">BÂTIMENT NOVA</h1>
+              <h1 className="about__title">ABOUT</h1>
               <p className="about__subtitle">
                 Plomberie • Chauffage • Rénovation • Dépannage • Travaux intérieurs
               </p>
