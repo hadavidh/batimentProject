@@ -13,9 +13,12 @@ export default function About() {
                 Artisans & professionnels du bâtiment
               </div>
 
-              <h1 id="about-title" className="about__title">ABOUT</h1>
+              <h1 id="about-title" className="about__title">
+                ABOUT
+              </h1>
               <p className="about__subtitle">
-                Plomberie • Chauffage • Rénovation • Dépannage • Travaux intérieurs
+                Plomberie • Chauffage • Rénovation • Dépannage • Travaux
+                intérieurs
               </p>
 
               <div className="about__badges">
@@ -37,11 +40,15 @@ export default function About() {
               <div className="about__stats">
                 <div className="about__stat">
                   <span className="about__statNum">+10</span>
-                  <span className="about__statLabel">ans d’expérience (fictif)</span>
+                  <span className="about__statLabel">
+                    ans d’expérience (fictif)
+                  </span>
                 </div>
                 <div className="about__stat">
                   <span className="about__statNum">24–48h</span>
-                  <span className="about__statLabel">délais d’intervention</span>
+                  <span className="about__statLabel">
+                    délais d’intervention
+                  </span>
                 </div>
                 <div className="about__stat">
                   <span className="about__statNum">100%</span>
@@ -96,15 +103,16 @@ export default function About() {
             <article className="about__card">
               <h2 className="about__h2">Qui sommes-nous ?</h2>
               <p className="about__p">
-                <strong>Bâtiment Nova</strong> est une entreprise (fictive) d’artisans
-                spécialisés en <strong>plomberie</strong> et <strong>chauffage</strong>,
-                avec une approche professionnelle : diagnostic clair, intervention propre,
-                finitions soignées.
+                <strong>Bâtiment Nova</strong> est une entreprise (fictive)
+                d’artisans spécialisés en <strong>plomberie</strong> et{" "}
+                <strong>chauffage</strong>, avec une approche professionnelle :
+                diagnostic clair, intervention propre, finitions soignées.
               </p>
               <p className="about__p">
-                Nous intervenons aussi sur la <strong>rénovation intérieure</strong> :
-                salle de bain, cuisine, réseaux d’eau, radiateurs, chauffe-eau,
-                entretien et mises aux normes.
+                Nous intervenons aussi sur la{" "}
+                <strong>rénovation intérieure</strong> : salle de bain, cuisine,
+                réseaux d’eau, radiateurs, chauffe-eau, entretien et mises aux
+                normes.
               </p>
 
               <ul className="about__bullets">
@@ -125,7 +133,9 @@ export default function About() {
                 </div>
                 <div className="about__infoRow">
                   <span className="about__label">Zone</span>
-                  <span className="about__value">Île-de-France & alentours</span>
+                  <span className="about__value">
+                    Île-de-France & alentours
+                  </span>
                 </div>
                 <div className="about__infoRow">
                   <span className="about__label">Téléphone</span>
@@ -158,7 +168,8 @@ export default function About() {
           <div className="about__sectionHead">
             <h2 className="about__h2">Nos services</h2>
             <p className="about__p about__muted">
-              Des prestations adaptées aux particuliers et aux professionnels (fictif).
+              Des prestations adaptées aux particuliers et aux professionnels
+              (fictif).
             </p>
           </div>
 
@@ -167,8 +178,8 @@ export default function About() {
               <div className="about__serviceIcon">🔧</div>
               <h3 className="about__h3">Plomberie</h3>
               <p className="about__p">
-                Fuites, robinetterie, WC, évacuations, réseaux d’eau, remplacement de
-                chauffe-eau.
+                Fuites, robinetterie, WC, évacuations, réseaux d’eau,
+                remplacement de chauffe-eau.
               </p>
               <ul className="about__miniList">
                 <li>Recherche de fuite</li>
@@ -181,8 +192,8 @@ export default function About() {
               <div className="about__serviceIcon">🔥</div>
               <h3 className="about__h3">Chauffage / Chauffagiste</h3>
               <p className="about__p">
-                Entretien, dépannage, radiateurs, purge, équilibrage, installation et
-                mise en service.
+                Entretien, dépannage, radiateurs, purge, équilibrage,
+                installation et mise en service.
               </p>
               <ul className="about__miniList">
                 <li>Diagnostic chauffage</li>
@@ -195,8 +206,8 @@ export default function About() {
               <div className="about__serviceIcon">🚿</div>
               <h3 className="about__h3">Rénovation salle de bain</h3>
               <p className="about__p">
-                Création/modernisation : douche, baignoire, meuble vasque, faïence,
-                étanchéité, finitions.
+                Création/modernisation : douche, baignoire, meuble vasque,
+                faïence, étanchéité, finitions.
               </p>
               <ul className="about__miniList">
                 <li>Conception & préparation</li>

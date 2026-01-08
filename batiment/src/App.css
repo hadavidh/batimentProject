@@ -1,4 +1,4 @@
-@import './styles/global.css';
+@import "./styles/global.css";
 
 /* App specific overrides */
 footer {
@@ -38,11 +38,15 @@ footer {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height); /* empêche le header sticky de couvrir la cible */
+  scroll-padding-top: var(
+    --header-height
+  ); /* empêche le header sticky de couvrir la cible */
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
   color: var(--color-text);
   line-height: 1.6;
   background-color: var(--color-bg);

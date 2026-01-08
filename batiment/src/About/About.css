@@ -52,7 +52,7 @@
   height: 10px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--accent2), var(--accent));
-  box-shadow: 0 0 0 5px rgba(255,255,255,0.05);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.05);
 }
 
 .about__title {
@@ -80,7 +80,7 @@
 .about__badge {
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   font-weight: 700;
   font-size: var(--text-sm);
@@ -103,18 +103,25 @@
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
-  transition: transform 0.08s ease, background 0.15s ease, border-color 0.15s ease;
-  box-shadow: 0 12px 34px rgba(0,0,0,0.25);
+  transition:
+    transform 0.08s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.25);
 }
 
 .about__btn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.10);
-  border-color: rgba(255,255,255,0.22);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .about__btn--primary {
-  background: linear-gradient(135deg, rgba(255, 209, 102, 0.30), rgba(76, 201, 240, 0.16));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 209, 102, 0.3),
+    rgba(76, 201, 240, 0.16)
+  );
   border-color: rgba(255, 209, 102, 0.28);
 }
 
@@ -133,8 +140,8 @@
 .about__stat {
   padding: 14px 14px;
   border-radius: 16px;
-  background: rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .about__statNum {
@@ -164,7 +171,7 @@
   width: 100%;
   border-radius: calc(var(--radius) + 4px);
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   box-shadow: var(--shadow);
   padding: 16px;
   display: flex;
@@ -183,8 +190,8 @@
   font-weight: 750;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(0,0,0,0.14);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.14);
   color: var(--text);
 }
 
@@ -201,8 +208,8 @@
 
 .about__iconBox {
   border-radius: 16px;
-  background: rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 14px;
 }
 
@@ -226,7 +233,7 @@
 
 .about__heroNoteLine {
   height: 1px;
-  background: rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .about__muted {
@@ -308,8 +315,8 @@
   gap: 12px;
   padding: 12px;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .about__label {
@@ -334,8 +341,8 @@
   font-size: var(--text-sm);
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.07);
   color: var(--text);
   font-weight: 650;
 }
@@ -355,11 +362,11 @@
 }
 
 .about__serviceCard {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 18px;
-  box-shadow: 0 14px 42px rgba(0,0,0,0.22);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.22);
 }
 
 .about__serviceIcon {
@@ -368,8 +375,8 @@
   border-radius: 16px;
   display: grid;
   place-items: center;
-  background: rgba(0,0,0,0.18);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   margin-bottom: 12px;
   font-size: 20px;
 }
@@ -390,7 +397,7 @@
 ========================= */
 .about__footer {
   padding: 20px 18px;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 16px;
 }
 
@@ -412,12 +419,12 @@
   color: var(--text);
   font-weight: 750;
   text-decoration: none;
-  border-bottom: 1px dashed rgba(255,255,255,0.35);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
   padding-bottom: 2px;
 }
 
 .about__footerLink:hover {
-  border-bottom-color: rgba(255,255,255,0.7);
+  border-bottom-color: rgba(255, 255, 255, 0.7);
 }
 
 /* =========================
