@@ -4,7 +4,7 @@ export default function About() {
   return (
     <main className="about">
       {/* HERO */}
-      <header className="about__hero">
+      <section className="about__hero" aria-labelledby="about-title">
         <div className="about__container">
           <div className="about__heroGrid">
             <div className="about__heroLeft">
@@ -13,7 +13,7 @@ export default function About() {
                 Artisans & professionnels du bâtiment
               </div>
 
-              <h1 className="about__title">ABOUT</h1>
+              <h1 id="about-title" className="about__title">ABOUT</h1>
               <p className="about__subtitle">
                 Plomberie • Chauffage • Rénovation • Dépannage • Travaux intérieurs
               </p>
@@ -87,7 +87,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
       {/* QUI SOMMES-NOUS */}
       <section className="about__section">
@@ -221,18 +221,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="about__footer">
-        <div className="about__container about__footerRow">
-          <p className="about__footerText">
-            © {new Date().getFullYear()} Bâtiment Nova — contenu fictif.
-          </p>
-          <a className="about__footerLink" href="/contact">
-            Contact / devis
-          </a>
-        </div>
-      </footer>
     </main>
   );
 }
