@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="home">
       {/* Header & Navigation */}
-      <header>
+      {/* <header>
         <nav>
           <a href="/" className="logo">BuildPro</a>
           <ul className="nav-links">
@@ -41,7 +41,7 @@ export default function Home() {
           </ul>
           <a href="#contact" className="cta-button">Get in Touch</a>
         </nav>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="hero">
@@ -75,17 +75,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section id="why-us" className="why-us">
-        <About />
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="contact">
-
-        <ContactPage />
       </section>
 
       {/* Footer */}
