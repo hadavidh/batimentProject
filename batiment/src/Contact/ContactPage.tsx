@@ -5,7 +5,7 @@ export default function ContactPage() {
     return (
         <div className="contact-page">
             {/* Hero Section */}
-            <section className="hero">
+            <section className="contact-hero">
                 <h1>Contact Us</h1>
                 <p>We’re here to help you find your dream home!</p>
             </section>
