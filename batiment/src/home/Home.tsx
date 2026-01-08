@@ -15,7 +15,7 @@ export default function Home() {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-                    [name]: value,
+      [name]: value,
     }));
   };
 
