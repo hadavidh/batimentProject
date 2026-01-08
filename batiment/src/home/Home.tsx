@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Home.css';
 import About from '../About/About';
+import ContactPage from '../Contact';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -78,61 +79,13 @@ export default function Home() {
 
       {/* Why Us Section */}
       <section id="why-us" className="why-us">
-        <About/>
+        <About />
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="contact">
-        <div className="container">
-          <h2>Get Your Free Quote Today</h2>
-          <p>Contact us for a consultation and let's discuss your construction project</p>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="project">Project Description</label>
-              <textarea
-                id="project"
-                name="project"
-                value={formData.project}
-                onChange={handleInputChange}
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="btn-primary" style={{ width: '100%' }}>Send Inquiry</button>
-          </form>
-        </div>
+
+        <ContactPage />
       </section>
 
       {/* Footer */}
