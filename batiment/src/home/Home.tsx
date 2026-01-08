@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Home.css';
+import About from '../About/About';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ export default function Home() {
           <a href="/" className="logo">BuildPro</a>
           <ul className="nav-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#why-us"><About/></a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <a href="#contact" className="cta-button">Get in Touch</a>
@@ -75,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Us Section */}
+      Why Us Section
       <section id="why-us" className="why-us">
         <div className="container">
           <h2 className="section-title">Why Choose Us</h2>
@@ -98,59 +99,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="contact">
-        <div className="container">
-          <h2>Get Your Free Quote Today</h2>
-          <p>Contact us for a consultation and let's discuss your construction project</p>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="project">Project Description</label>
-              <textarea
-                id="project"
-                name="project"
-                value={formData.project}
-                onChange={handleInputChange}
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="btn-primary" style={{ width: '100%' }}>Send Inquiry</button>
-          </form>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer>
